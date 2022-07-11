@@ -1,0 +1,9 @@
+{
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "sort1": "Name (A to Z)",
+    "sort2": "Name (Z to A)",
+    "sort3": "Price (low to high)",
+    "sort4": "Price (high to low)"
+  }
+  
