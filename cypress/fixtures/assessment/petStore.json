@@ -1,0 +1,22 @@
+{
+    "userId": "petstoreuser",
+    "newPassword": "storeuser",
+    "repeatPassword": "storeuser",
+    "firstName": "first",
+    "lastName": "last",
+    "email": "email@mail.com",
+    "phone": "1234567890",
+    "address1": "abc",
+    "address2": "cba",
+    "city": "addfgh",
+    "state": "zxcv",
+    "zip": "12345",
+    "country": "qwert",
+    "LanguagePreference": "english",
+    "favouriteCategory": "DOGS",
+    "catName": " Adult Female Persian ",
+    "species": "Persian",
+    "inStock": "4350 in stock.",
+    "rate": "$93.50"
+  }
+  

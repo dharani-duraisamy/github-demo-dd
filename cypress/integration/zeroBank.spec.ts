@@ -1,5 +1,4 @@
 
-
 describe('Assessment', () => {
     it('zeroBank Feedback', () => {
         cy.fixture('assessment/zeroBank.json').then(
@@ -8,14 +7,17 @@ describe('Assessment', () => {
             
         cy.visitHomepage();
         cy.visitFeedbackpage();
+        cy.get('#feedback-title').contains('Feedback');
+        cy.get('#name').type(data.name);
+        cy.get('#email').type(data.email);
+        cy.get('#subject').type(data.subject);
+        cy.get('#comment').type(data.comments)
+        cy.get('[type="reset"]').click()
         cy.get('#name').type(data.name);
         cy.get('#email').type(data.email);
         cy.get('#subject').type(data.subject);
         cy.get('#comment').type(data.comments)
         cy.get('.btn-signin').click()
-        // cy.get('feedback-title').should('have.text', 'Feedback')
-        // Thank you for your comments, sdbv. They will be reviewed by our Customer Service staff and given the full attention that they deserve.')
-        
          
               })
         })
