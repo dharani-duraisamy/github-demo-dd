@@ -1,6 +1,9 @@
 {
+    "username": "username",
+    "password": "password",
     "name": "zerobank",
     "email": "zero@gmail.com",
     "subject": "feedback",
-    "comments": "Please do not send any account information in a message sent from here"
+    "comments": "Please do not send any account information in a message sent from here",
+    "FeedbackSubmit": "Feedback Thank you for your comments, zerobank. They will be reviewed by our Customer Service staff and given the full attention that they deserve."
 }
