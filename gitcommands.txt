@@ -1,0 +1,135 @@
+***********************************************************************************************************
+GIT configeration for mail & user name:
+***********************************************************************************************************
+
+                * git config --list | grep "user.email"
+
+                * git config --global user.email "dharani.duraisamy@xxx.com" 
+
+                * git config --global user.name "dharani.duraisamy"
+
+                * git commit --amend --author="dharani.duraisamy <dharani.duraisamy@xxx.com>"
+
+
+
+***********************************************************************************************************
+CLONE PROCESS
+***********************************************************************************************************
+
+GIT Clone:
+
+                * git clone <repo link>
+                
+                
+GIT List:
+
+                * ls
+                  <it will listout all files under that cloned project>
+
+                  
+GIT cd:
+
+                * cd <file_name>
+                  <the cmd path move to that file path> 
+ 
+
+GIT Branch Status check:
+
+                * git status
+                
+                
+GIT Create New Branch:
+
+                * git checkout -b <dd /modulename>
+
+Branch name should be ID(or)name(dd)/Modulename.
+
+
+Install Dependency After every clone:
+                                
+                * yarn install
+                                
+                * yarn prepare
+                
+
+Onetime execution after every clone of UI:
+
+                * export CYPRESS_CACHE_FOLDER="./.cypress-cache" 
+                
+                * yarn run cypress:ensure-binary
+                
+                
+GIT Branch Delete:
+
+                * git branch -d <branch>
+
+
+To clone Paticular Branch:
+
+                * git clone --branch <banch name> <git repo url>
+                
+                
+*************************************************************************************************************                  
+GIT PUSH PROCESS
+**************************************************************************************************************              
+
+GIT Push:
+
+                
+                1) git add .
+    <to add the files you wants to push>
+                
+                2) yarn run pretty-quick 
+                <first run this command before every push>
+                
+                3) yarn ng lint chcp-e2e
+                <lint check before push>
+                
+                4) yarn ts-node libs/ci/sanity-checks/src/run.ts
+                <to sanity checks>
+  
+                5) git commit -m " commit message"
+                <commit the msg what we did in that module / msg should not contain UpperCase, any spl char>
+                
+                6) git push --set-upstream origin <dd/branchname >
+                     (or)
+                   git push
+                   <to push the code our local branch>
+                   
+***********************************************************************************************************                  
+GIT REBASE COMMANDS
+***********************************************************************************************************
+
+Quit command from another terminal:
+
+                * :q!
+
+For rebase the code for UI:
+
+                * git fetch origin <master branch name> eg: next
+                * git fetch origin next
+                
+                * git rebase origin<master branch name> eg: /next 
+                * git rebase origin/next
+                                [If conflicts shown should resolve in the code and then run * git rebase --continue]
+                                Then run * git push -f instead of 3rd command
+                                
+                * git push --force --set-upstream origin <branch name> eg: dd/branchname
+                * git push --force --set-upstream origin dd/branchname
+
+git rebase (--continue | --abort | --skip):
+
+To continue the rebase:
+
+                                * git rebase --continue
+
+***********************************************************************************************************                  
+GIT ignore big file
+***********************************************************************************************************
+
+        * notepad .gitignore
+        <this will create notepad>
+
+        * give the folder/file name that need to ignore while pushing to GIT
+        <Example: node_module , yarn.lock etc..>
+
